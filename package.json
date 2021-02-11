@@ -1,0 +1,30 @@
+{
+  "name": "migrantes-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot that contains useful commands for migrants ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czegarram/migrantes-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "migrantes"
+  ],
+  "author": "Cesar Zegarra & Erik Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czegarram/migrantes-bot/issues"
+  },
+  "homepage": "https://github.com/czegarram/migrantes-bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "superagent": "^6.1.0",
+    "telegraf": "^4.0.3"
+  }
+}
