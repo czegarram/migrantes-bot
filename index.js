@@ -26,7 +26,7 @@ bot.command('dolar',  (ctx) => {
 })
 
 bot.command('resumen',  (ctx) => {
-    ctx.reply('Viernes 12: Desgutación Hamburguesas (Causa house)')
+    ctx.reply('Viernes 12 (desde 18:00) Degustación Hamburguesas at Causa house')
 })
 
 bot.launch()
