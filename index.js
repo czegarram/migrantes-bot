@@ -6,7 +6,7 @@ require('dotenv').config()
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
 bot.start((ctx) => ctx.reply('Bienvenido Migrante!'))
-bot.help((ctx) => ctx.reply('Hola! Mi nombre es Ralph'))
+bot.help((ctx) => ctx.reply('Hola! Mi nombre es Ralph.'))
 bot.on('sticker', (ctx) => ctx.reply('👍'))
 bot.hears('hola', (ctx) => ctx.reply('Hola causita!'))
 bot.command('dolar',  (ctx) => {
@@ -26,7 +26,7 @@ bot.command('dolar',  (ctx) => {
 })
 
 bot.command('resumen',  (ctx) => {
-    ctx.reply('- Viernes 12: Hamburguesas (Causa house)')
+    ctx.reply('Viernes 12: Desgutación Hamburguesas (Causa house)')
 })
 
 bot.launch()
