@@ -5,7 +5,7 @@ const serviceUrl = 'https://cotizaciones-brou.herokuapp.com/api/currency/latest'
 require('dotenv').config()
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
-bot.start((ctx) => ctx.reply('Bienvenido Migrante!!'))
+bot.start((ctx) => ctx.reply('Bienvenido Migrante!'))
 bot.help((ctx) => ctx.reply('Hola! Mi nombre es Ralph.'))
 bot.on('sticker', (ctx) => ctx.reply('👍'))
 bot.hears('hola', (ctx) => ctx.reply('Hola causita!'))
