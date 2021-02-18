@@ -12,9 +12,9 @@ const bot = new Telegraf(env.bot.token)
 // Registering all telegram commands and actions
 config.getGlobbedFiles('./src/**/*command.js')
     .forEach((listenerPath) => {
-        require(path.resolve(listenerPath))(bot);
-    }
-);
+            require(path.resolve(listenerPath))(bot);
+        }
+    );
 
 bot.launch()
 
