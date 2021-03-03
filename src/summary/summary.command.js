@@ -2,6 +2,6 @@
 
 module.exports = (bot) => {
     bot.command('resumen',  (ctx) => {
-        ctx.reply('Viernes 26 - 7:30pm : Ingles con chilcanos (o juguito) en la causa house')
+        ctx.reply('Viernes 5 - 7:00pm : Cena en sushi work para despedida Ale&Bryan parte 10000')
     })
 }
