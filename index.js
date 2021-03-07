@@ -7,15 +7,21 @@ const path = require('path')
 const env = require('./config/env')
 const config = require('./config/config')
 
-const bot = new Telegraf(env.bot.token)
+const admin = require("firebase-admin");
+admin.initializeApp({
+    credential: admin.credential.applicationDefault(),
+    databaseURL: env.firebase.databaseUrl
+});
+const db = admin.database();
 
+const bot = new Telegraf(env.bot.token)
 bot.use(session());
 
 let stages = [];
 
 config.getGlobbedFiles([ './src/**/*wizard.js'])
     .forEach((listenerPath) => {
-            stages.push( require(path.resolve(listenerPath))());
+            stages.push( require(path.resolve(listenerPath))(db));
         }
     );
 
@@ -25,7 +31,7 @@ bot.use(stage.middleware())
 // Registering all telegram commands and actions
 config.getGlobbedFiles(['./src/**/*command.js'])
     .forEach((listenerPath) => {
-            require(path.resolve(listenerPath))(bot);
+            require(path.resolve(listenerPath))(bot, db);
         }
     );
 

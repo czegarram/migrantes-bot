@@ -6,5 +6,8 @@ module.exports = {
     },
     exchangeService: {
         url: 'https://cotizaciones-brou.herokuapp.com/api/currency/latest'
+    },
+    firebase: {
+        databaseUrl: process.env.FIREBASE_DB_URL || ''
     }
 };

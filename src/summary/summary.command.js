@@ -1,7 +1,9 @@
 'use strict';
 
-module.exports = (bot) => {
-    bot.command('resumen',  (ctx) => {
-        ctx.reply('Viernes 19: Birras en patagonia')
+module.exports = (bot, db) => {
+    bot.command('resumen',  async (ctx) => {
+        const ref = db.ref('/messages/summary');
+        const summaryText = await ref.once('value');
+        ctx.reply(summaryText)
     })
 }
