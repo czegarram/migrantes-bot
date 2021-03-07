@@ -117,3 +117,6 @@ dist
 
 # Jet brains
 .idea
+
+# firebase
+migrantes-bot-firebase-adminsdk.json
